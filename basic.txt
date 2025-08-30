@@ -1,0 +1,99 @@
+1. MAE = mean of absolute error = 
+Advantages:
+1 the data or the answer have same unit as column output data
+2.  Robust or scalable even if outliers
+
+Disadvantage:
+1. Not differentiable at origin so not used as loss function
+
+MSE = Mean of squared errors
+square nikalo error ka unka summation kro then mean find kro
+Advantages: 
+1. differentiable curve so applied to gradient descent
+
+Disadvantage:
+1. Unit of output and output columns are mismatched so difficult to interpret
+2. High calculations
+3. Outliers se bhot change ho skta h yh
+
+
+RMSE : Root Mean squared error
+error ka square kro phir mean then Root
+
+Advantages:
+1 the data or the answer have same unit as column output data
+
+Disadvantage:
+2. High calculations
+3. Outliers se bhot change ho skta h yh bhi
+
+R2 Score: it is independent of context of data
+alpha = (sum of errors of regression best fit line from dataset)/(sum of errors of mean fit line from dataset)
+R2 Score = 1 - alpha
+Ranges from 0 to 1 but if applied without checking data it can be negative also 
+
+✅ Advantages of R² Score:
+
+1. Easy Interpretation:
+
+Gives a single number (0–1) showing how well the model explains the variance in data.
+Example: R² = 0.8 → model explains 80% of variance.
+
+2. Comparative Measure:
+Useful for comparing multiple models on the same dataset. Higher R² generally means better fit.
+
+3. Scale-independent:
+Works regardless of the scale of dependent variable (unlike metrics like MSE which depend on unit of measurement).
+
+4. Widely Used:
+Standard in regression problems, so results are easy to communicate and understand.
+
+
+❌ Disadvantages of R² Score:
+
+1. Doesn’t Indicate Causality: High R² doesn’t mean the model is correct, just that it fits the training data.
+
+2. Sensitive to Overfitting:
+Adding more predictors can artificially increase R², even if they don’t improve the model.
+
+3. Doesn’t Show Error Magnitude:
+Two models with the same R² can have very different prediction errors (e.g., one may underpredict, the other may overpredict).
+
+4. Misleading with Non-linear Data:
+In non-linear regression or inappropriate models, R² might be high but the model could still be poor.
+
+5. Can Be Negative:
+In cases where the model is worse than a simple mean predictor, R² < 0, which is sometimes confusing.
+
+
+
+Adjusted R2 Score
+✅ Adjusted R² Score – Advantages
+
+1.Penalizes extra variables:
+R² hamesha badhta hai jab nayi feature add karte ho, chahe woh useful ho ya na ho.
+
+2.Adjusted R² unnecessary variables ko penalize karta hai.
+Better model comparison
+
+Agar nayi feature actual me helpful hai → Adjusted R² badhega.
+Agar useless feature hai → Adjusted R² gir jayega.
+
+3.More reliable:
+Multiple regression (zyada predictors) ke case me Adjusted R² R² se zyada trustworthy hota hai.
+
+
+❌ Adjusted R² Score – Disadvantages
+1. Still doesn’t measure accuracy directly
+
+2. Yeh bhi error ka magnitude (jaise MSE/MAE) nahi batata.
+
+3.Harder to interpret:
+Formula R² se thoda complex hota hai, beginners ke liye confusing lagta hai.
+
+4. Only for linear-type models:
+Non-linear regression me iska interpretation tricky ho jata hai.
+
+Note:
+1. High R² but low Adjusted R² = Overfitting
+2. Both high = Good model
