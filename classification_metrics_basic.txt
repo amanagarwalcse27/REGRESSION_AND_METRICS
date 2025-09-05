@@ -1,0 +1,60 @@
+
+
+
+
+                Predicted
+             |  Positive  |  Negative  |
+----------------------------------------
+Actual | Positive |   TP = 50    |  FN = 10    |
+       | Negative |   FP = 5     |  TN = 35    |
+----------------------------------------
+
+
+📘 Classification Metrics – Test Format Notes
+
+1. What is Accuracy?
+   - Definition: Total correct predictions / Total predictions
+   - Formula: (TP + TN) / (TP + TN + FP + FN)
+   - Use Case: Jab classes balanced ho.
+
+2. What is Precision?
+   - Definition: Out of predicted positives, how many were actually positive.
+   - Formula: TP / (TP + FP)
+   - Use Case: Jab false positives avoid karne ho (e.g. spam detection).
+
+3. What is Recall?
+   - Definition: Out of actual positives, how many were correctly predicted.
+   - Formula: TP / (TP + FN)
+   - Use Case: Jab false negatives avoid karne ho (e.g. disease detection).
+
+4. What is F1 Score?
+   - Definition: Harmonic mean of Precision and Recall.
+   - Formula: 2 * (Precision * Recall) / (Precision + Recall)
+   - Use Case: Jab Precision aur Recall dono important ho.
+
+5. What is Confusion Matrix?
+   - Definition: Table showing TP, TN, FP, FN.
+   - Structure:
+     |               | Predicted Positive | Predicted Negative |
+     |---------------|--------------------|--------------------|
+     | Actual Positive | TP                | FN                 |
+     | Actual Negative | FP                | TN                 |
+
+6. Define the following:
+   - TP (True Positive): Model ne correctly positive predict kiya.
+   - TN (True Negative): Model ne correctly negative predict kiya.
+   - FP (False Positive): Model ne galti se positive predict kiya.
+   - FN (False Negative): Model ne galti se negative predict kiya.
+
+7. Why is Accuracy not always reliable?
+   - Reason: Agar data imbalanced ho (e.g. 95% healthy, 5% sick), toh accuracy misleading ho sakti hai.
+
+8. Which metric is best for medical diagnosis?
+   - Answer: Recall (kyunki false negative avoid karna important hai).
+
+9. Which metric is best for spam detection?
+   - Answer: Precision (kyunki false positive avoid karna important hai).
+
+10. What is the ideal F1 Score?
+    - Range: 0 to 1
+    - Ideal: Closer to 1 means better balance between Precision and Recall.
