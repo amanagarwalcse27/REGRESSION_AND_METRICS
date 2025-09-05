@@ -1,0 +1,25 @@
+📌 KNN Basic Theory:
+KNN (K-Nearest Neighbors) is a supervised learning algorithm used for classification and regression.
+
+It doesn’t build a model during training (that’s why it’s called a lazy learner).
+
+Instead, it stores the whole dataset and makes predictions only when a new data point comes.
+
+
+
+
+⚙️ How KNN Works (Steps)
+
+Choose a value of K (number of neighbors).
+
+For a new data point:
+
+1.Calculate the distance (e.g., Euclidean distance) from all training points.
+
+2. Select the K nearest neighbors (smallest distances).
+
+3. For classification → take the majority class among neighbors.
+For regression → take the average of neighbors’ values.
+
+👉 Example:
+If K=3 and for a new point, neighbors are [Cat, Dog, Cat] → prediction = Cat (majority vote).
